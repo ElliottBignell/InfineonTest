@@ -1,13 +1,6 @@
 /home/elliott/graz/CMakeFiles/rebuild_cache.dir
 /home/elliott/graz/CMakeFiles/test.dir
 /home/elliott/graz/CMakeFiles/edit_cache.dir
-/home/elliott/graz/Graz/CMakeFiles/edit_cache.dir
-/home/elliott/graz/Graz/CMakeFiles/test.dir
-/home/elliott/graz/Graz/CMakeFiles/rebuild_cache.dir
-/home/elliott/graz/Graz/CMakeFiles/mainwindow.dir
-/home/elliott/graz/Graz/CMakeFiles/graz.dir
-/home/elliott/graz/Graz/CMakeFiles/mainwindow_autogen.dir
-/home/elliott/graz/Graz/CMakeFiles/graz_autogen.dir
 /home/elliott/graz/tests/CMakeFiles/edit_cache.dir
 /home/elliott/graz/tests/CMakeFiles/test.dir
 /home/elliott/graz/tests/CMakeFiles/testmedian.dir

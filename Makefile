@@ -122,58 +122,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mainwindow
-
-# Build rule for target.
-mainwindow: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mainwindow
-.PHONY : mainwindow
-
-# fast build rule for target.
-mainwindow/fast:
-	$(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/build
-.PHONY : mainwindow/fast
-
-#=============================================================================
-# Target rules for targets named graz
-
-# Build rule for target.
-graz: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 graz
-.PHONY : graz
-
-# fast build rule for target.
-graz/fast:
-	$(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/build
-.PHONY : graz/fast
-
-#=============================================================================
-# Target rules for targets named mainwindow_autogen
-
-# Build rule for target.
-mainwindow_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mainwindow_autogen
-.PHONY : mainwindow_autogen
-
-# fast build rule for target.
-mainwindow_autogen/fast:
-	$(MAKE) -f Graz/CMakeFiles/mainwindow_autogen.dir/build.make Graz/CMakeFiles/mainwindow_autogen.dir/build
-.PHONY : mainwindow_autogen/fast
-
-#=============================================================================
-# Target rules for targets named graz_autogen
-
-# Build rule for target.
-graz_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 graz_autogen
-.PHONY : graz_autogen
-
-# fast build rule for target.
-graz_autogen/fast:
-	$(MAKE) -f Graz/CMakeFiles/graz_autogen.dir/build.make Graz/CMakeFiles/graz_autogen.dir/build
-.PHONY : graz_autogen/fast
-
-#=============================================================================
 # Target rules for targets named testmedian
 
 # Build rule for target.
@@ -234,10 +182,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... mainwindow"
-	@echo "... graz"
-	@echo "... mainwindow_autogen"
-	@echo "... graz_autogen"
 	@echo "... testmedian"
 	@echo "... tests"
 	@echo "... testmedian_autogen"
