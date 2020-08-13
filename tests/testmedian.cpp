@@ -1,3 +1,5 @@
+#include "../Graz/median.hpp"
+
 void TestMedian::toMedian()
 {
     QString str = "Hello";

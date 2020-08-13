@@ -5,3 +5,4 @@
 4b7a68cafb4d3d0a9c20ee6e38ed4fc3 Graz/ui_mainwindow.h
 9b0fe6db4335a223fd6bc483335bf182 tests/CMakeFiles/testmedian_autogen
 7176d3b6cf59a1f6f1576ce2780197be tests/CMakeFiles/tests_autogen
+2edaf4277e5c78cf882786d801fc98f8 tests/moc_testmedian.cpp

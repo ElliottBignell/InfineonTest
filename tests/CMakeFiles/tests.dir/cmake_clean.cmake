@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/testmedian_autogen.dir/AutogenOldSettings.txt"
   "tests_autogen"
   "CMakeFiles/tests_autogen.dir/AutogenOldSettings.txt"
-  "CMakeFiles/tests.dir/main.o"
-  "CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o"
+  "CMakeFiles/tests.dir/main.cpp.o"
+  "CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o"
   "tests.pdb"
   "tests"
 )

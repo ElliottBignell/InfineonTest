@@ -43,73 +43,73 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/elliott/graz/tests
+CMAKE_SOURCE_DIR = /home/elliott/graz
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/elliott/graz/tests
+CMAKE_BINARY_DIR = /home/elliott/graz
 
 # Include any dependencies generated for this target.
-include CMakeFiles/tests.dir/depend.make
+include tests/CMakeFiles/tests.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/tests.dir/progress.make
+include tests/CMakeFiles/tests.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/tests.dir/flags.make
+include tests/CMakeFiles/tests.dir/flags.make
 
-CMakeFiles/tests.dir/main.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/main.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/main.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/main.o -c /home/elliott/graz/tests/main.cpp
+tests/CMakeFiles/tests.dir/main.cpp.o: tests/CMakeFiles/tests.dir/flags.make
+tests/CMakeFiles/tests.dir/main.cpp.o: tests/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/tests.dir/main.cpp.o"
+	cd /home/elliott/graz/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/main.cpp.o -c /home/elliott/graz/tests/main.cpp
 
-CMakeFiles/tests.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/main.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/tests/main.cpp > CMakeFiles/tests.dir/main.i
+tests/CMakeFiles/tests.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/main.cpp.i"
+	cd /home/elliott/graz/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/tests/main.cpp > CMakeFiles/tests.dir/main.cpp.i
 
-CMakeFiles/tests.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/main.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/tests/main.cpp -o CMakeFiles/tests.dir/main.s
+tests/CMakeFiles/tests.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/main.cpp.s"
+	cd /home/elliott/graz/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/tests/main.cpp -o CMakeFiles/tests.dir/main.cpp.s
 
-CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o: tests_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o -c /home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp
+tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o: tests/CMakeFiles/tests.dir/flags.make
+tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o: tests/tests_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o"
+	cd /home/elliott/graz/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o -c /home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp
 
-CMakeFiles/tests.dir/tests_autogen/mocs_compilation.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests_autogen/mocs_compilation.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp > CMakeFiles/tests.dir/tests_autogen/mocs_compilation.i
+tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.i"
+	cd /home/elliott/graz/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp > CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.i
 
-CMakeFiles/tests.dir/tests_autogen/mocs_compilation.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests_autogen/mocs_compilation.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp -o CMakeFiles/tests.dir/tests_autogen/mocs_compilation.s
+tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.s"
+	cd /home/elliott/graz/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp -o CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.s
 
 # Object files for target tests
 tests_OBJECTS = \
-"CMakeFiles/tests.dir/main.o" \
-"CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o"
+"CMakeFiles/tests.dir/main.cpp.o" \
+"CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
 
-tests: CMakeFiles/tests.dir/main.o
-tests: CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o
-tests: CMakeFiles/tests.dir/build.make
-tests: /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.12.4
-tests: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.4
-tests: CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tests"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
+tests/tests: tests/CMakeFiles/tests.dir/main.cpp.o
+tests/tests: tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o
+tests/tests: tests/CMakeFiles/tests.dir/build.make
+tests/tests: /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.12.4
+tests/tests: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.4
+tests/tests: tests/CMakeFiles/tests.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tests"
+	cd /home/elliott/graz/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/tests.dir/build: tests
+tests/CMakeFiles/tests.dir/build: tests/tests
 
-.PHONY : CMakeFiles/tests.dir/build
+.PHONY : tests/CMakeFiles/tests.dir/build
 
-CMakeFiles/tests.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/tests.dir/clean
+tests/CMakeFiles/tests.dir/clean:
+	cd /home/elliott/graz/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
+.PHONY : tests/CMakeFiles/tests.dir/clean
 
-CMakeFiles/tests.dir/depend:
-	cd /home/elliott/graz/tests && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/elliott/graz/tests /home/elliott/graz/tests /home/elliott/graz/tests /home/elliott/graz/tests /home/elliott/graz/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/tests.dir/depend
+tests/CMakeFiles/tests.dir/depend:
+	cd /home/elliott/graz && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/elliott/graz /home/elliott/graz/tests /home/elliott/graz /home/elliott/graz/tests /home/elliott/graz/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : tests/CMakeFiles/tests.dir/depend
 

@@ -4,9 +4,9 @@ file(REMOVE_RECURSE
   "tests_autogen"
   "CMakeFiles/tests_autogen.dir/AutogenOldSettings.txt"
   "moc_testmedian.cpp"
-  "CMakeFiles/testmedian.dir/moc_testmedian.o"
-  "CMakeFiles/testmedian.dir/testmedian.o"
-  "CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o"
+  "CMakeFiles/testmedian.dir/moc_testmedian.cpp.o"
+  "CMakeFiles/testmedian.dir/testmedian.cpp.o"
+  "CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.cpp.o"
   "libtestmedian.pdb"
   "libtestmedian.a"
 )

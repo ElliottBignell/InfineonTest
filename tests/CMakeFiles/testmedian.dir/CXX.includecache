@@ -6,15 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/elliott/graz/tests/moc_testmedian.cpp
-testmedian.hpp
-/home/elliott/graz/tests/testmedian.hpp
-QtCore/qbytearray.h
+/home/elliott/graz/Graz/median.hpp
+algorithm
 -
-QtCore/qmetatype.h
+vector
 -
 
-/home/elliott/graz/tests/testmedian.hpp
-QtTest/QtTest
--
+/home/elliott/graz/tests/testmedian.cpp
+../Graz/median.hpp
+/home/elliott/graz/Graz/median.hpp
 

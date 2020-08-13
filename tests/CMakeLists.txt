@@ -9,11 +9,13 @@ QT5_WRAP_CPP(Cmake_hdr_moc testmedian.hpp)
 
 set( SOURCE
      testmedian.cpp
+     ../median.cpp
      PARENT_SCOPE
 )
 
 set( HEADERS
      testmedian.h
+     ../median.hpp
      PARENT_SCOPE
 )
 

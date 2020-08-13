@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/elliott/graz/tests -I/home/elliott/graz/tests/testmedian_autogen/include 
+CXX_INCLUDES = -I/home/elliott/graz/tests -I/home/elliott/graz/tests/testmedian_autogen/include -I/home/elliott/graz/Graz 
 
