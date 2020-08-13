@@ -11,7 +11,7 @@ set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
 set(AM_BUILD_DIR "/home/elliott/graz/Graz/graz_autogen")
 set(AM_INCLUDE_DIR "/home/elliott/graz/Graz/graz_autogen/include")
 # Files
-set(AM_SOURCES "/home/elliott/graz/Graz/main.cpp")
+set(AM_SOURCES "/home/elliott/graz/Graz/main.cpp;/home/elliott/graz/Graz/mainwindow.cpp;/home/elliott/graz/Graz/median.cpp")
 set(AM_HEADERS "")
 set(AM_SETTINGS_FILE "/home/elliott/graz/Graz/CMakeFiles/graz_autogen.dir/AutogenOldSettings.txt")
 # Qt
@@ -19,7 +19,7 @@ set(AM_QT_VERSION_MAJOR 5)
 set(AM_QT_MOC_EXECUTABLE "/usr/lib/qt5/bin/moc")
 set(AM_QT_UIC_EXECUTABLE "")
 # MOC settings
-set(AM_MOC_SKIP "/home/elliott/graz/Graz/mainwindow.h;/home/elliott/graz/Graz/mainwindow_autogen/mocs_compilation.cpp;/home/elliott/graz/Graz/moc_mainwindow.cpp;/home/elliott/graz/Graz/ui_mainwindow.h")
+set(AM_MOC_SKIP "/home/elliott/graz/Graz/mainwindow.h;/home/elliott/graz/Graz/moc_mainwindow.cpp;/home/elliott/graz/Graz/ui_mainwindow.h")
 set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_GUI_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB")
 set(AM_MOC_INCLUDES "/home/elliott/graz/Graz;/usr/include/x86_64-linux-gnu/qt5;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++;/usr/include")
 set(AM_MOC_OPTIONS "")

@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.13)
+
 # Notice name prefix of this variable, set by CMake according
 # to value given with "project()" in the root CMakeLists.txt.
 find_package(Qt5 COMPONENTS Core Test)

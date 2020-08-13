@@ -122,6 +122,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named graz
+
+# Build rule for target.
+graz: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graz
+.PHONY : graz
+
+# fast build rule for target.
+graz/fast:
+	$(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/build
+.PHONY : graz/fast
+
+#=============================================================================
+# Target rules for targets named graz_autogen
+
+# Build rule for target.
+graz_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graz_autogen
+.PHONY : graz_autogen
+
+# fast build rule for target.
+graz_autogen/fast:
+	$(MAKE) -f Graz/CMakeFiles/graz_autogen.dir/build.make Graz/CMakeFiles/graz_autogen.dir/build
+.PHONY : graz_autogen/fast
+
+#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -156,6 +182,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... graz"
+	@echo "... graz_autogen"
 	@echo "... tests"
 	@echo "... tests_autogen"
 .PHONY : help

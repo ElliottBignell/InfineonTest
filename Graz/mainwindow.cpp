@@ -1,8 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <vector>
 #include <QFile>
 #include <QFileDialog>
 #include <QTextStream>
+#include <QString>
+#include "median.hpp"
+
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,24 +23,32 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,
+    fileName = QFileDialog::getOpenFileName(this,
         tr("Open Text file"), "", tr("Text Files (*.txt)"));
+
+    ui->txtFilename->setText( fileName );
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    if ( fileName.isEmpty() )
+        return;
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
            return;
 
-    ui->txtFilename->setText( fileName );
+    QTextStream in( &file );
 
-    QTextStream in(&file);
+    vector< int > content;
+
     while (!in.atEnd())
     {
         QString line = in.readLine();
-    }
-}
 
-void MainWindow::on_pushButton_2_clicked()
-{
-    float median = 0;
-    ui->txtMedian->setText( QString::number( median ) );
+        content.emplace_back( line.toInt() );
+    }
+
+    float med = median( content );
+    ui->txtMedian->setText( QString::number( med ) );
 }

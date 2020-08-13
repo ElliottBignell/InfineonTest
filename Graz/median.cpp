@@ -12,7 +12,7 @@ float median( vector< int >&  values )
         // throw  TODO
     }
 
-    unsigned int nth = count / 2;
+    int nth = count / 2;
 
     if ( 1 == count % 2 ) {
 

@@ -70,9 +70,35 @@ Graz/CMakeFiles/graz.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graz.dir/main.cpp.s"
 	cd /home/elliott/graz/Graz && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/Graz/main.cpp -o CMakeFiles/graz.dir/main.cpp.s
 
+Graz/CMakeFiles/graz.dir/mainwindow.cpp.o: Graz/CMakeFiles/graz.dir/flags.make
+Graz/CMakeFiles/graz.dir/mainwindow.cpp.o: Graz/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Graz/CMakeFiles/graz.dir/mainwindow.cpp.o"
+	cd /home/elliott/graz/Graz && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graz.dir/mainwindow.cpp.o -c /home/elliott/graz/Graz/mainwindow.cpp
+
+Graz/CMakeFiles/graz.dir/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graz.dir/mainwindow.cpp.i"
+	cd /home/elliott/graz/Graz && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/Graz/mainwindow.cpp > CMakeFiles/graz.dir/mainwindow.cpp.i
+
+Graz/CMakeFiles/graz.dir/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graz.dir/mainwindow.cpp.s"
+	cd /home/elliott/graz/Graz && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/Graz/mainwindow.cpp -o CMakeFiles/graz.dir/mainwindow.cpp.s
+
+Graz/CMakeFiles/graz.dir/median.cpp.o: Graz/CMakeFiles/graz.dir/flags.make
+Graz/CMakeFiles/graz.dir/median.cpp.o: Graz/median.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Graz/CMakeFiles/graz.dir/median.cpp.o"
+	cd /home/elliott/graz/Graz && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graz.dir/median.cpp.o -c /home/elliott/graz/Graz/median.cpp
+
+Graz/CMakeFiles/graz.dir/median.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graz.dir/median.cpp.i"
+	cd /home/elliott/graz/Graz && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/Graz/median.cpp > CMakeFiles/graz.dir/median.cpp.i
+
+Graz/CMakeFiles/graz.dir/median.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graz.dir/median.cpp.s"
+	cd /home/elliott/graz/Graz && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/Graz/median.cpp -o CMakeFiles/graz.dir/median.cpp.s
+
 Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o: Graz/CMakeFiles/graz.dir/flags.make
 Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o: Graz/graz_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o"
 	cd /home/elliott/graz/Graz && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o -c /home/elliott/graz/Graz/graz_autogen/mocs_compilation.cpp
 
 Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.i: cmake_force
@@ -86,19 +112,23 @@ Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.s: cmake_force
 # Object files for target graz
 graz_OBJECTS = \
 "CMakeFiles/graz.dir/main.cpp.o" \
+"CMakeFiles/graz.dir/mainwindow.cpp.o" \
+"CMakeFiles/graz.dir/median.cpp.o" \
 "CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o"
 
 # External object files for target graz
 graz_EXTERNAL_OBJECTS =
 
 Graz/graz: Graz/CMakeFiles/graz.dir/main.cpp.o
+Graz/graz: Graz/CMakeFiles/graz.dir/mainwindow.cpp.o
+Graz/graz: Graz/CMakeFiles/graz.dir/median.cpp.o
 Graz/graz: Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o
 Graz/graz: Graz/CMakeFiles/graz.dir/build.make
 Graz/graz: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.4
 Graz/graz: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.4
 Graz/graz: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.4
 Graz/graz: Graz/CMakeFiles/graz.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable graz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elliott/graz/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable graz"
 	cd /home/elliott/graz/Graz && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/graz.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

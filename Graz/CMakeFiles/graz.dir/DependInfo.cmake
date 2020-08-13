@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/elliott/graz/Graz/graz_autogen/mocs_compilation.cpp" "/home/elliott/graz/Graz/CMakeFiles/graz.dir/graz_autogen/mocs_compilation.cpp.o"
   "/home/elliott/graz/Graz/main.cpp" "/home/elliott/graz/Graz/CMakeFiles/graz.dir/main.cpp.o"
+  "/home/elliott/graz/Graz/mainwindow.cpp" "/home/elliott/graz/Graz/CMakeFiles/graz.dir/mainwindow.cpp.o"
+  "/home/elliott/graz/Graz/median.cpp" "/home/elliott/graz/Graz/CMakeFiles/graz.dir/median.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

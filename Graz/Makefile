@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/elliott/graz
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,17 +88,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,21 +122,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Graz/CMakeFiles/mainwindow.dir/rule:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 Graz/CMakeFiles/mainwindow.dir/rule
-.PHONY : Graz/CMakeFiles/mainwindow.dir/rule
-
-# Convenience name for target.
-mainwindow: Graz/CMakeFiles/mainwindow.dir/rule
-
-.PHONY : mainwindow
-
-# fast build rule for target.
-mainwindow/fast:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/build
-.PHONY : mainwindow/fast
-
-# Convenience name for target.
 Graz/CMakeFiles/graz.dir/rule:
 	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 Graz/CMakeFiles/graz.dir/rule
 .PHONY : Graz/CMakeFiles/graz.dir/rule
@@ -150,21 +135,6 @@ graz: Graz/CMakeFiles/graz.dir/rule
 graz/fast:
 	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/build
 .PHONY : graz/fast
-
-# Convenience name for target.
-Graz/CMakeFiles/mainwindow_autogen.dir/rule:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 Graz/CMakeFiles/mainwindow_autogen.dir/rule
-.PHONY : Graz/CMakeFiles/mainwindow_autogen.dir/rule
-
-# Convenience name for target.
-mainwindow_autogen: Graz/CMakeFiles/mainwindow_autogen.dir/rule
-
-.PHONY : mainwindow_autogen
-
-# fast build rule for target.
-mainwindow_autogen/fast:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow_autogen.dir/build.make Graz/CMakeFiles/mainwindow_autogen.dir/build
-.PHONY : mainwindow_autogen/fast
 
 # Convenience name for target.
 Graz/CMakeFiles/graz_autogen.dir/rule:
@@ -235,59 +205,59 @@ main.cpp.s:
 	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mainwindow_autogen/mocs_compilation.o: mainwindow_autogen/mocs_compilation.cpp.o
+mainwindow.o: mainwindow.cpp.o
 
-.PHONY : mainwindow_autogen/mocs_compilation.o
-
-# target to build an object file
-mainwindow_autogen/mocs_compilation.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/mainwindow_autogen/mocs_compilation.cpp.o
-.PHONY : mainwindow_autogen/mocs_compilation.cpp.o
-
-mainwindow_autogen/mocs_compilation.i: mainwindow_autogen/mocs_compilation.cpp.i
-
-.PHONY : mainwindow_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-mainwindow_autogen/mocs_compilation.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/mainwindow_autogen/mocs_compilation.cpp.i
-.PHONY : mainwindow_autogen/mocs_compilation.cpp.i
-
-mainwindow_autogen/mocs_compilation.s: mainwindow_autogen/mocs_compilation.cpp.s
-
-.PHONY : mainwindow_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-mainwindow_autogen/mocs_compilation.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/mainwindow_autogen/mocs_compilation.cpp.s
-.PHONY : mainwindow_autogen/mocs_compilation.cpp.s
-
-moc_mainwindow.o: moc_mainwindow.cpp.o
-
-.PHONY : moc_mainwindow.o
+.PHONY : mainwindow.o
 
 # target to build an object file
-moc_mainwindow.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/moc_mainwindow.cpp.o
-.PHONY : moc_mainwindow.cpp.o
+mainwindow.cpp.o:
+	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/mainwindow.cpp.o
+.PHONY : mainwindow.cpp.o
 
-moc_mainwindow.i: moc_mainwindow.cpp.i
+mainwindow.i: mainwindow.cpp.i
 
-.PHONY : moc_mainwindow.i
+.PHONY : mainwindow.i
 
 # target to preprocess a source file
-moc_mainwindow.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/moc_mainwindow.cpp.i
-.PHONY : moc_mainwindow.cpp.i
+mainwindow.cpp.i:
+	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/mainwindow.cpp.i
+.PHONY : mainwindow.cpp.i
 
-moc_mainwindow.s: moc_mainwindow.cpp.s
+mainwindow.s: mainwindow.cpp.s
 
-.PHONY : moc_mainwindow.s
+.PHONY : mainwindow.s
 
 # target to generate assembly for a file
-moc_mainwindow.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/moc_mainwindow.cpp.s
-.PHONY : moc_mainwindow.cpp.s
+mainwindow.cpp.s:
+	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/mainwindow.cpp.s
+.PHONY : mainwindow.cpp.s
+
+median.o: median.cpp.o
+
+.PHONY : median.o
+
+# target to build an object file
+median.cpp.o:
+	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/median.cpp.o
+.PHONY : median.cpp.o
+
+median.i: median.cpp.i
+
+.PHONY : median.i
+
+# target to preprocess a source file
+median.cpp.i:
+	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/median.cpp.i
+.PHONY : median.cpp.i
+
+median.s: median.cpp.s
+
+.PHONY : median.s
+
+# target to generate assembly for a file
+median.cpp.s:
+	cd /home/elliott/graz && $(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/median.cpp.s
+.PHONY : median.cpp.s
 
 # Help Target
 help:
@@ -295,12 +265,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... rebuild_cache"
-	@echo "... mainwindow"
+	@echo "... edit_cache"
 	@echo "... graz"
-	@echo "... mainwindow_autogen"
+	@echo "... test"
 	@echo "... graz_autogen"
 	@echo "... graz_autogen/mocs_compilation.o"
 	@echo "... graz_autogen/mocs_compilation.i"
@@ -308,12 +276,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mainwindow_autogen/mocs_compilation.o"
-	@echo "... mainwindow_autogen/mocs_compilation.i"
-	@echo "... mainwindow_autogen/mocs_compilation.s"
-	@echo "... moc_mainwindow.o"
-	@echo "... moc_mainwindow.i"
-	@echo "... moc_mainwindow.s"
+	@echo "... mainwindow.o"
+	@echo "... mainwindow.i"
+	@echo "... mainwindow.s"
+	@echo "... median.o"
+	@echo "... median.i"
+	@echo "... median.s"
 .PHONY : help
 
 

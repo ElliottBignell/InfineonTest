@@ -26,10 +26,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        median.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+        median.hpp
 
 FORMS += \
         mainwindow.ui

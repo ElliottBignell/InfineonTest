@@ -53,9 +53,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Graz/main.cpp \
-		../Graz/mainwindow.cpp moc_mainwindow.cpp
+		../Graz/mainwindow.cpp \
+		../Graz/median.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
+		median.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -115,6 +117,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		../Graz/.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -134,8 +137,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../Graz/Graz.pro ../Graz/mainwindow.h ../Graz/main.cpp \
-		../Graz/mainwindow.cpp
+		../Graz/Graz.pro ../Graz/mainwindow.h \
+		../Graz/median.hpp ../Graz/main.cpp \
+		../Graz/mainwindow.cpp \
+		../Graz/median.cpp
 QMAKE_TARGET  = Graz
 DESTDIR       = 
 TARGET        = Graz
@@ -205,6 +210,7 @@ Makefile: ../Graz/Graz.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -284,6 +290,7 @@ Makefile: ../Graz/Graz.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf:
@@ -319,8 +326,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Graz/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Graz/main.cpp ../Graz/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Graz/mainwindow.h ../Graz/median.hpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Graz/main.cpp ../Graz/mainwindow.cpp ../Graz/median.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Graz/mainwindow.ui $(DISTDIR)/
 
 
@@ -386,8 +393,12 @@ main.o: ../Graz/main.cpp ../Graz/mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Graz/main.cpp
 
 mainwindow.o: ../Graz/mainwindow.cpp ../Graz/mainwindow.h \
-		../Graz/ui_mainwindow.h
+		../Graz/ui_mainwindow.h \
+		../Graz/median.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Graz/mainwindow.cpp
+
+median.o: ../Graz/median.cpp ../Graz/median.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o median.o ../Graz/median.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
