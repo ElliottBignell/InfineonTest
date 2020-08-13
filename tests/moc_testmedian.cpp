@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TestMedian_t {
-    QByteArrayData data[3];
-    char stringdata0[21];
+    QByteArrayData data[7];
+    char stringdata0[62];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,11 +32,16 @@ struct qt_meta_stringdata_TestMedian_t {
 static const qt_meta_stringdata_TestMedian_t qt_meta_stringdata_TestMedian = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "TestMedian"
-QT_MOC_LITERAL(1, 11, 8), // "toMedian"
-QT_MOC_LITERAL(2, 20, 0) // ""
+QT_MOC_LITERAL(1, 11, 9), // "toMedian1"
+QT_MOC_LITERAL(2, 21, 0), // ""
+QT_MOC_LITERAL(3, 22, 9), // "toMedian2"
+QT_MOC_LITERAL(4, 32, 9), // "toMedian3"
+QT_MOC_LITERAL(5, 42, 9), // "toMedian4"
+QT_MOC_LITERAL(6, 52, 9) // "toMedian5"
 
     },
-    "TestMedian\0toMedian\0"
+    "TestMedian\0toMedian1\0\0toMedian2\0"
+    "toMedian3\0toMedian4\0toMedian5"
 };
 #undef QT_MOC_LITERAL
 
@@ -46,7 +51,7 @@ static const uint qt_meta_data_TestMedian[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,9 +59,17 @@ static const uint qt_meta_data_TestMedian[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+       1,    0,   39,    2, 0x08 /* Private */,
+       3,    0,   40,    2, 0x08 /* Private */,
+       4,    0,   41,    2, 0x08 /* Private */,
+       5,    0,   42,    2, 0x08 /* Private */,
+       6,    0,   43,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -68,7 +81,11 @@ void TestMedian::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<TestMedian *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->toMedian(); break;
+        case 0: _t->toMedian1(); break;
+        case 1: _t->toMedian2(); break;
+        case 2: _t->toMedian3(); break;
+        case 3: _t->toMedian4(); break;
+        case 4: _t->toMedian5(); break;
         default: ;
         }
     }
@@ -104,13 +121,13 @@ int TestMedian::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 5;
     }
     return _id;
 }
