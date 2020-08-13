@@ -178,6 +178,36 @@ main.s:
 .PHONY : main.s
 
 # target to build an object file
+moc_testmedian.o:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/moc_testmedian.o
+.PHONY : moc_testmedian.o
+
+# target to preprocess a source file
+moc_testmedian.i:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/moc_testmedian.i
+.PHONY : moc_testmedian.i
+
+# target to generate assembly for a file
+moc_testmedian.s:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/moc_testmedian.s
+.PHONY : moc_testmedian.s
+
+# target to build an object file
+testmedian.o:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian.o
+.PHONY : testmedian.o
+
+# target to preprocess a source file
+testmedian.i:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian.i
+.PHONY : testmedian.i
+
+# target to generate assembly for a file
+testmedian.s:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian.s
+.PHONY : testmedian.s
+
+# target to build an object file
 testmedian_autogen/mocs_compilation.o:
 	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o
 .PHONY : testmedian_autogen/mocs_compilation.o
@@ -222,6 +252,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... moc_testmedian.o"
+	@echo "... moc_testmedian.i"
+	@echo "... moc_testmedian.s"
+	@echo "... testmedian.o"
+	@echo "... testmedian.i"
+	@echo "... testmedian.s"
 	@echo "... testmedian_autogen/mocs_compilation.o"
 	@echo "... testmedian_autogen/mocs_compilation.i"
 	@echo "... testmedian_autogen/mocs_compilation.s"

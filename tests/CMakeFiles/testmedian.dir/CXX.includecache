@@ -6,5 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/elliott/graz/tests/testmedian_autogen/mocs_compilation.cpp
+/home/elliott/graz/tests/moc_testmedian.cpp
+testmedian.hpp
+/home/elliott/graz/tests/testmedian.hpp
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/elliott/graz/tests/testmedian.hpp
+QtTest/QtTest
+-
 

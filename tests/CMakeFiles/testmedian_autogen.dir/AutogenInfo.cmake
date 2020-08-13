@@ -11,7 +11,7 @@ set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
 set(AM_BUILD_DIR "/home/elliott/graz/tests/testmedian_autogen")
 set(AM_INCLUDE_DIR "/home/elliott/graz/tests/testmedian_autogen/include")
 # Files
-set(AM_SOURCES "")
+set(AM_SOURCES "/home/elliott/graz/tests/testmedian.cpp")
 set(AM_HEADERS "")
 set(AM_SETTINGS_FILE "/home/elliott/graz/tests/CMakeFiles/testmedian_autogen.dir/AutogenOldSettings.txt")
 # Qt
@@ -19,7 +19,7 @@ set(AM_QT_VERSION_MAJOR 5)
 set(AM_QT_MOC_EXECUTABLE "/usr/lib/qt5/bin/moc")
 set(AM_QT_UIC_EXECUTABLE "")
 # MOC settings
-set(AM_MOC_SKIP "")
+set(AM_MOC_SKIP "/home/elliott/graz/tests/moc_testmedian.cpp;/home/elliott/graz/tests/testmedian.hpp")
 set(AM_MOC_DEFINITIONS "")
 set(AM_MOC_INCLUDES "/home/elliott/graz/tests")
 set(AM_MOC_OPTIONS "")

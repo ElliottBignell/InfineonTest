@@ -57,9 +57,39 @@ include CMakeFiles/testmedian.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/testmedian.dir/flags.make
 
+moc_testmedian.cpp: testmedian.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_testmedian.cpp"
+	/usr/lib/qt5/bin/moc @/home/elliott/graz/tests/moc_testmedian.cpp_parameters
+
+CMakeFiles/testmedian.dir/moc_testmedian.o: CMakeFiles/testmedian.dir/flags.make
+CMakeFiles/testmedian.dir/moc_testmedian.o: moc_testmedian.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testmedian.dir/moc_testmedian.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testmedian.dir/moc_testmedian.o -c /home/elliott/graz/tests/moc_testmedian.cpp
+
+CMakeFiles/testmedian.dir/moc_testmedian.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testmedian.dir/moc_testmedian.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/tests/moc_testmedian.cpp > CMakeFiles/testmedian.dir/moc_testmedian.i
+
+CMakeFiles/testmedian.dir/moc_testmedian.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testmedian.dir/moc_testmedian.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/tests/moc_testmedian.cpp -o CMakeFiles/testmedian.dir/moc_testmedian.s
+
+CMakeFiles/testmedian.dir/testmedian.o: CMakeFiles/testmedian.dir/flags.make
+CMakeFiles/testmedian.dir/testmedian.o: testmedian.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testmedian.dir/testmedian.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testmedian.dir/testmedian.o -c /home/elliott/graz/tests/testmedian.cpp
+
+CMakeFiles/testmedian.dir/testmedian.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testmedian.dir/testmedian.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elliott/graz/tests/testmedian.cpp > CMakeFiles/testmedian.dir/testmedian.i
+
+CMakeFiles/testmedian.dir/testmedian.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testmedian.dir/testmedian.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elliott/graz/tests/testmedian.cpp -o CMakeFiles/testmedian.dir/testmedian.s
+
 CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o: CMakeFiles/testmedian.dir/flags.make
 CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o: testmedian_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o -c /home/elliott/graz/tests/testmedian_autogen/mocs_compilation.cpp
 
 CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.i: cmake_force
@@ -72,15 +102,19 @@ CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.s: cmake_force
 
 # Object files for target testmedian
 testmedian_OBJECTS = \
+"CMakeFiles/testmedian.dir/moc_testmedian.o" \
+"CMakeFiles/testmedian.dir/testmedian.o" \
 "CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o"
 
 # External object files for target testmedian
 testmedian_EXTERNAL_OBJECTS =
 
+libtestmedian.a: CMakeFiles/testmedian.dir/moc_testmedian.o
+libtestmedian.a: CMakeFiles/testmedian.dir/testmedian.o
 libtestmedian.a: CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o
 libtestmedian.a: CMakeFiles/testmedian.dir/build.make
 libtestmedian.a: CMakeFiles/testmedian.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtestmedian.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elliott/graz/tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libtestmedian.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/testmedian.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testmedian.dir/link.txt --verbose=$(VERBOSE)
 
@@ -93,7 +127,7 @@ CMakeFiles/testmedian.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/testmedian.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/testmedian.dir/clean
 
-CMakeFiles/testmedian.dir/depend:
+CMakeFiles/testmedian.dir/depend: moc_testmedian.cpp
 	cd /home/elliott/graz/tests && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/elliott/graz/tests /home/elliott/graz/tests /home/elliott/graz/tests /home/elliott/graz/tests /home/elliott/graz/tests/CMakeFiles/testmedian.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/testmedian.dir/depend
 

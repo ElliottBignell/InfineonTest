@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/elliott/graz/tests/moc_testmedian.cpp" "/home/elliott/graz/tests/CMakeFiles/testmedian.dir/moc_testmedian.o"
+  "/home/elliott/graz/tests/testmedian.cpp" "/home/elliott/graz/tests/CMakeFiles/testmedian.dir/testmedian.o"
   "/home/elliott/graz/tests/testmedian_autogen/mocs_compilation.cpp" "/home/elliott/graz/tests/CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

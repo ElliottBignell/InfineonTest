@@ -1,0 +1,5 @@
+-I/home/elliott/graz/tests
+-I/home/elliott/graz/tests
+-o
+/home/elliott/graz/tests/moc_testmedian.cpp
+/home/elliott/graz/tests/testmedian.hpp
