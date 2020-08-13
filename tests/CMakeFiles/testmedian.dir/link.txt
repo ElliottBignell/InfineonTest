@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtestmedian.a  CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o
+/usr/bin/ranlib libtestmedian.a

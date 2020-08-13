@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/elliott/graz
+CMAKE_SOURCE_DIR = /home/elliott/graz/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/elliott/graz
+CMAKE_BINARY_DIR = /home/elliott/graz/tests
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,27 +78,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/elliott/graz && $(CMAKE_COMMAND) -E cmake_progress_start /home/elliott/graz/CMakeFiles /home/elliott/graz/tests/CMakeFiles/progress.marks
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliott/graz/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliott/graz/tests/CMakeFiles /home/elliott/graz/tests/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliott/graz/tests/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -108,102 +97,115 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/elliott/graz && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-tests/CMakeFiles/tests.dir/rule:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/rule
-.PHONY : tests/CMakeFiles/tests.dir/rule
+#=============================================================================
+# Target rules for targets named testmedian
 
-# Convenience name for target.
-tests: tests/CMakeFiles/tests.dir/rule
+# Build rule for target.
+testmedian: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testmedian
+.PHONY : testmedian
 
+# fast build rule for target.
+testmedian/fast:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/build
+.PHONY : testmedian/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
 .PHONY : tests
 
 # fast build rule for target.
 tests/fast:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
-# Convenience name for target.
-tests/CMakeFiles/tests_autogen.dir/rule:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests_autogen.dir/rule
-.PHONY : tests/CMakeFiles/tests_autogen.dir/rule
+#=============================================================================
+# Target rules for targets named testmedian_autogen
 
-# Convenience name for target.
-tests_autogen: tests/CMakeFiles/tests_autogen.dir/rule
+# Build rule for target.
+testmedian_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testmedian_autogen
+.PHONY : testmedian_autogen
 
+# fast build rule for target.
+testmedian_autogen/fast:
+	$(MAKE) -f CMakeFiles/testmedian_autogen.dir/build.make CMakeFiles/testmedian_autogen.dir/build
+.PHONY : testmedian_autogen/fast
+
+#=============================================================================
+# Target rules for targets named tests_autogen
+
+# Build rule for target.
+tests_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests_autogen
 .PHONY : tests_autogen
 
 # fast build rule for target.
 tests_autogen/fast:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests_autogen.dir/build.make tests/CMakeFiles/tests_autogen.dir/build
+	$(MAKE) -f CMakeFiles/tests_autogen.dir/build.make CMakeFiles/tests_autogen.dir/build
 .PHONY : tests_autogen/fast
 
-main.o: main.cpp.o
-
+# target to build an object file
+main.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/main.o
 .PHONY : main.o
 
-# target to build an object file
-main.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
+# target to preprocess a source file
+main.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/main.i
 .PHONY : main.i
 
-# target to preprocess a source file
-main.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
+# target to generate assembly for a file
+main.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/main.s
 .PHONY : main.s
 
-# target to generate assembly for a file
-main.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-tests_autogen/mocs_compilation.o: tests_autogen/mocs_compilation.cpp.o
-
-.PHONY : tests_autogen/mocs_compilation.o
-
 # target to build an object file
-tests_autogen/mocs_compilation.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.o
-.PHONY : tests_autogen/mocs_compilation.cpp.o
-
-tests_autogen/mocs_compilation.i: tests_autogen/mocs_compilation.cpp.i
-
-.PHONY : tests_autogen/mocs_compilation.i
+testmedian_autogen/mocs_compilation.o:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.o
+.PHONY : testmedian_autogen/mocs_compilation.o
 
 # target to preprocess a source file
-tests_autogen/mocs_compilation.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.i
-.PHONY : tests_autogen/mocs_compilation.cpp.i
-
-tests_autogen/mocs_compilation.s: tests_autogen/mocs_compilation.cpp.s
-
-.PHONY : tests_autogen/mocs_compilation.s
+testmedian_autogen/mocs_compilation.i:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.i
+.PHONY : testmedian_autogen/mocs_compilation.i
 
 # target to generate assembly for a file
-tests_autogen/mocs_compilation.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.s
-.PHONY : tests_autogen/mocs_compilation.cpp.s
+testmedian_autogen/mocs_compilation.s:
+	$(MAKE) -f CMakeFiles/testmedian.dir/build.make CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.s
+.PHONY : testmedian_autogen/mocs_compilation.s
+
+# target to build an object file
+tests_autogen/mocs_compilation.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests_autogen/mocs_compilation.o
+.PHONY : tests_autogen/mocs_compilation.o
+
+# target to preprocess a source file
+tests_autogen/mocs_compilation.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests_autogen/mocs_compilation.i
+.PHONY : tests_autogen/mocs_compilation.i
+
+# target to generate assembly for a file
+tests_autogen/mocs_compilation.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests_autogen/mocs_compilation.s
+.PHONY : tests_autogen/mocs_compilation.s
 
 # Help Target
 help:
@@ -212,13 +214,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... testmedian"
 	@echo "... rebuild_cache"
 	@echo "... tests"
-	@echo "... test"
+	@echo "... testmedian_autogen"
 	@echo "... tests_autogen"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... testmedian_autogen/mocs_compilation.o"
+	@echo "... testmedian_autogen/mocs_compilation.i"
+	@echo "... testmedian_autogen/mocs_compilation.s"
 	@echo "... tests_autogen/mocs_compilation.o"
 	@echo "... tests_autogen/mocs_compilation.i"
 	@echo "... tests_autogen/mocs_compilation.s"
@@ -233,6 +239,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/elliott/graz && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

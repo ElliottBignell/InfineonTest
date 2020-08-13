@@ -1,2 +1,2 @@
 QTEST_MAIN(TestQString)
-#include "testmedian.moc"
+#include "main.moc"

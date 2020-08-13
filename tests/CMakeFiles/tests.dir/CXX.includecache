@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/elliott/graz/tests/main.cpp
+main.moc
+/home/elliott/graz/tests/main.moc
+
+/home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp
+
+tests_autogen/include/main.moc
+

@@ -122,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named mainwindow
+
+# Build rule for target.
+mainwindow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mainwindow
+.PHONY : mainwindow
+
+# fast build rule for target.
+mainwindow/fast:
+	$(MAKE) -f Graz/CMakeFiles/mainwindow.dir/build.make Graz/CMakeFiles/mainwindow.dir/build
+.PHONY : mainwindow/fast
+
+#=============================================================================
 # Target rules for targets named graz
 
 # Build rule for target.
@@ -133,6 +146,19 @@ graz: cmake_check_build_system
 graz/fast:
 	$(MAKE) -f Graz/CMakeFiles/graz.dir/build.make Graz/CMakeFiles/graz.dir/build
 .PHONY : graz/fast
+
+#=============================================================================
+# Target rules for targets named mainwindow_autogen
+
+# Build rule for target.
+mainwindow_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mainwindow_autogen
+.PHONY : mainwindow_autogen
+
+# fast build rule for target.
+mainwindow_autogen/fast:
+	$(MAKE) -f Graz/CMakeFiles/mainwindow_autogen.dir/build.make Graz/CMakeFiles/mainwindow_autogen.dir/build
+.PHONY : mainwindow_autogen/fast
 
 #=============================================================================
 # Target rules for targets named graz_autogen
@@ -148,6 +174,19 @@ graz_autogen/fast:
 .PHONY : graz_autogen/fast
 
 #=============================================================================
+# Target rules for targets named testmedian
+
+# Build rule for target.
+testmedian: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testmedian
+.PHONY : testmedian
+
+# fast build rule for target.
+testmedian/fast:
+	$(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/build
+.PHONY : testmedian/fast
+
+#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -159,6 +198,19 @@ tests: cmake_check_build_system
 tests/fast:
 	$(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named testmedian_autogen
+
+# Build rule for target.
+testmedian_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testmedian_autogen
+.PHONY : testmedian_autogen
+
+# fast build rule for target.
+testmedian_autogen/fast:
+	$(MAKE) -f tests/CMakeFiles/testmedian_autogen.dir/build.make tests/CMakeFiles/testmedian_autogen.dir/build
+.PHONY : testmedian_autogen/fast
 
 #=============================================================================
 # Target rules for targets named tests_autogen
@@ -182,9 +234,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... mainwindow"
 	@echo "... graz"
+	@echo "... mainwindow_autogen"
 	@echo "... graz_autogen"
+	@echo "... testmedian"
 	@echo "... tests"
+	@echo "... testmedian_autogen"
 	@echo "... tests_autogen"
 .PHONY : help
 

@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/elliott/graz/Graz/graz_autogen/mocs_compilation.cpp
-
 /home/elliott/graz/Graz/main.cpp
 mainwindow.h
 /home/elliott/graz/Graz/mainwindow.h

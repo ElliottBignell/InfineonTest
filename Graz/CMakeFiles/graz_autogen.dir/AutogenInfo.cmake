@@ -19,7 +19,7 @@ set(AM_QT_VERSION_MAJOR 5)
 set(AM_QT_MOC_EXECUTABLE "/usr/lib/qt5/bin/moc")
 set(AM_QT_UIC_EXECUTABLE "")
 # MOC settings
-set(AM_MOC_SKIP "")
+set(AM_MOC_SKIP "/home/elliott/graz/Graz/mainwindow.h;/home/elliott/graz/Graz/mainwindow_autogen/mocs_compilation.cpp;/home/elliott/graz/Graz/moc_mainwindow.cpp;/home/elliott/graz/Graz/ui_mainwindow.h")
 set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_GUI_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB")
 set(AM_MOC_INCLUDES "/home/elliott/graz/Graz;/usr/include/x86_64-linux-gnu/qt5;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++;/usr/include")
 set(AM_MOC_OPTIONS "")

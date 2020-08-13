@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "mainwindow_autogen"
+  "CMakeFiles/mainwindow_autogen.dir/AutogenOldSettings.txt"
   "graz_autogen"
   "CMakeFiles/graz_autogen.dir/AutogenOldSettings.txt"
   "CMakeFiles/graz.dir/main.cpp.o"
