@@ -25,16 +25,17 @@ void MainWindow::on_pushButton_clicked()
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
            return;
 
+    ui->txtFilename->setText( fileName );
+
     QTextStream in(&file);
     while (!in.atEnd())
     {
         QString line = in.readLine();
-        ui->txtFilename.text = line;
     }
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
     float median = 0;
-    ui->txtMedian.text = median;
+    ui->txtMedian->setText( QString::number( median ) );
 }
