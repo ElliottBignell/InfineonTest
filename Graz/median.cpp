@@ -1,3 +1,4 @@
+#include <iostream>
 #include "median.hpp"
 
 using namespace std;
@@ -11,14 +12,17 @@ float median( vector< int >&  values )
         // throw  TODO
     }
 
+    unsigned int nth = count / 2;
+
     if ( 1 == count % 2 ) {
-        return nth_element( values.begin(), values.end(), count + 1 / 2,values.end() );
+
+        nth_element( values.begin(), values.begin() + nth, values.end() );
+        return values[ nth + 1 ];
     }
     else {
 
-        unsigned int n1 = nth_element( values.begin(), values.end(), count / 2 );    
-        unsigned int n2 = nth_element( values.begin(), values.end(), count / 2 + 1 );    
-
-        return ( n1 + n2 ) / 2;
+        nth_element( values.begin(), values.begin() + nth - 1, values.end() );    
+        nth_element( values.begin(), values.begin() + nth    , values.end() );    
+        return ( values[ nth - 1 ] + values[ nth ] ) / 2;
     } 
 }

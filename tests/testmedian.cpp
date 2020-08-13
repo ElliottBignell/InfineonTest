@@ -1,4 +1,5 @@
 #include <vector>
+#include "testmedian.hpp"
 #include "../Graz/median.hpp"
 
 void TestMedian::toMedian()

@@ -11,7 +11,7 @@ set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
 set(AM_BUILD_DIR "/home/elliott/graz/tests/tests_autogen")
 set(AM_INCLUDE_DIR "/home/elliott/graz/tests/tests_autogen/include")
 # Files
-set(AM_SOURCES "/home/elliott/graz/tests/main.cpp")
+set(AM_SOURCES "/home/elliott/graz/Graz/median.cpp;/home/elliott/graz/tests/main.cpp;/home/elliott/graz/tests/testmedian.cpp")
 set(AM_HEADERS "")
 set(AM_SETTINGS_FILE "/home/elliott/graz/tests/CMakeFiles/tests_autogen.dir/AutogenOldSettings.txt")
 # Qt
@@ -19,7 +19,7 @@ set(AM_QT_VERSION_MAJOR 5)
 set(AM_QT_MOC_EXECUTABLE "/usr/lib/qt5/bin/moc")
 set(AM_QT_UIC_EXECUTABLE "")
 # MOC settings
-set(AM_MOC_SKIP "/home/elliott/graz/tests/moc_testmedian.cpp;/home/elliott/graz/tests/testmedian.hpp;/home/elliott/graz/tests/testmedian_autogen/mocs_compilation.cpp")
+set(AM_MOC_SKIP "/home/elliott/graz/tests/moc_testmedian.cpp;/home/elliott/graz/tests/testmedian.hpp")
 set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_NO_DEBUG;QT_TESTCASE_BUILDDIR=\"/home/elliott/graz\";QT_TESTLIB_LIB")
 set(AM_MOC_INCLUDES "/home/elliott/graz/tests;/home/elliott/graz/Graz;/usr/include/x86_64-linux-gnu/qt5;/usr/include/x86_64-linux-gnu/qt5/QtTest;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++")
 set(AM_MOC_OPTIONS "")

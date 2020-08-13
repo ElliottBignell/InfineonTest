@@ -122,19 +122,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named testmedian
-
-# Build rule for target.
-testmedian: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testmedian
-.PHONY : testmedian
-
-# fast build rule for target.
-testmedian/fast:
-	$(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/build
-.PHONY : testmedian/fast
-
-#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -146,19 +133,6 @@ tests: cmake_check_build_system
 tests/fast:
 	$(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
-
-#=============================================================================
-# Target rules for targets named testmedian_autogen
-
-# Build rule for target.
-testmedian_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testmedian_autogen
-.PHONY : testmedian_autogen
-
-# fast build rule for target.
-testmedian_autogen/fast:
-	$(MAKE) -f tests/CMakeFiles/testmedian_autogen.dir/build.make tests/CMakeFiles/testmedian_autogen.dir/build
-.PHONY : testmedian_autogen/fast
 
 #=============================================================================
 # Target rules for targets named tests_autogen
@@ -182,9 +156,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... testmedian"
 	@echo "... tests"
-	@echo "... testmedian_autogen"
 	@echo "... tests_autogen"
 .PHONY : help
 

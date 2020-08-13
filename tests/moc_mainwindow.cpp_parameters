@@ -1,0 +1,6 @@
+-I/home/elliott/graz/Graz
+-I/home/elliott/graz/tests
+-I/home/elliott/graz/tests
+-o
+/home/elliott/graz/tests/moc_mainwindow.cpp
+/home/elliott/graz/tests/mainwindow.h

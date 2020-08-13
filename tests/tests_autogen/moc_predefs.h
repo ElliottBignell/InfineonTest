@@ -4,7 +4,7 @@
 #define __cpp_attributes 200809
 #define __UINT_LEAST16_MAX__ 0xffff
 #define __ATOMIC_ACQUIRE 2
-#define QT_TESTCASE_BUILDDIR "/home/elliott/graz/tests"
+#define QT_TESTCASE_BUILDDIR "/home/elliott/graz"
 #define __FLT128_MAX_10_EXP__ 4932
 #define __FLT_MIN__ 1.17549435082228750796873653722224568e-38F
 #define __GCC_IEC_559_COMPLEX 2

@@ -222,6 +222,12 @@ Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 //The directory containing a CMake configuration file for Qt5Test.
 Qt5Test_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Test
 
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
+//Dependencies for the target
+testmedian_LIB_DEPENDS:STATIC=general;Qt5::Test;
+
 
 ########################
 # INTERNAL cache entries

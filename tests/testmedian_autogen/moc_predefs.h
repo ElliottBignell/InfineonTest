@@ -4,6 +4,7 @@
 #define __cpp_attributes 200809
 #define __UINT_LEAST16_MAX__ 0xffff
 #define __ATOMIC_ACQUIRE 2
+#define QT_TESTCASE_BUILDDIR "/home/elliott/graz"
 #define __FLT128_MAX_10_EXP__ 4932
 #define __FLT_MIN__ 1.17549435082228750796873653722224568e-38F
 #define __GCC_IEC_559_COMPLEX 2
@@ -53,6 +54,8 @@
 #define __SHRT_MAX__ 0x7fff
 #define __LDBL_MAX__ 1.18973149535723176502126385303097021e+4932L
 #define __FLT64X_MAX_10_EXP__ 4932
+#define QT_NO_DEBUG 1
+#define QT_TESTLIB_LIB 1
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
 #define __FLT128_DENORM_MIN__ 6.47517511943802511092443895822764655e-4966F128
@@ -295,6 +298,7 @@
 #define __ORDER_BIG_ENDIAN__ 4321
 #define __DBL_MANT_DIG__ 53
 #define __cpp_inheriting_constructors 201511
+#define QT_CORE_LIB 1
 #define __SIZEOF_FLOAT128__ 16
 #define __INT_LEAST64_MAX__ 0x7fffffffffffffffL
 #define __DEC64_MIN__ 1E-383DD

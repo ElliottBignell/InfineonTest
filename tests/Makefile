@@ -67,17 +67,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,6 +77,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,21 +122,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/testmedian.dir/rule:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testmedian.dir/rule
-.PHONY : tests/CMakeFiles/testmedian.dir/rule
-
-# Convenience name for target.
-testmedian: tests/CMakeFiles/testmedian.dir/rule
-
-.PHONY : testmedian
-
-# fast build rule for target.
-testmedian/fast:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/build
-.PHONY : testmedian/fast
-
-# Convenience name for target.
 tests/CMakeFiles/tests.dir/rule:
 	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/rule
 .PHONY : tests/CMakeFiles/tests.dir/rule
@@ -152,21 +137,6 @@ tests/fast:
 .PHONY : tests/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testmedian_autogen.dir/rule:
-	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testmedian_autogen.dir/rule
-.PHONY : tests/CMakeFiles/testmedian_autogen.dir/rule
-
-# Convenience name for target.
-testmedian_autogen: tests/CMakeFiles/testmedian_autogen.dir/rule
-
-.PHONY : testmedian_autogen
-
-# fast build rule for target.
-testmedian_autogen/fast:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian_autogen.dir/build.make tests/CMakeFiles/testmedian_autogen.dir/build
-.PHONY : testmedian_autogen/fast
-
-# Convenience name for target.
 tests/CMakeFiles/tests_autogen.dir/rule:
 	cd /home/elliott/graz && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests_autogen.dir/rule
 .PHONY : tests/CMakeFiles/tests_autogen.dir/rule
@@ -180,6 +150,33 @@ tests_autogen: tests/CMakeFiles/tests_autogen.dir/rule
 tests_autogen/fast:
 	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests_autogen.dir/build.make tests/CMakeFiles/tests_autogen.dir/build
 .PHONY : tests_autogen/fast
+
+__/Graz/median.o: __/Graz/median.cpp.o
+
+.PHONY : __/Graz/median.o
+
+# target to build an object file
+__/Graz/median.cpp.o:
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/Graz/median.cpp.o
+.PHONY : __/Graz/median.cpp.o
+
+__/Graz/median.i: __/Graz/median.cpp.i
+
+.PHONY : __/Graz/median.i
+
+# target to preprocess a source file
+__/Graz/median.cpp.i:
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/Graz/median.cpp.i
+.PHONY : __/Graz/median.cpp.i
+
+__/Graz/median.s: __/Graz/median.cpp.s
+
+.PHONY : __/Graz/median.s
+
+# target to generate assembly for a file
+__/Graz/median.cpp.s:
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/Graz/median.cpp.s
+.PHONY : __/Graz/median.cpp.s
 
 main.o: main.cpp.o
 
@@ -214,7 +211,7 @@ moc_testmedian.o: moc_testmedian.cpp.o
 
 # target to build an object file
 moc_testmedian.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/moc_testmedian.cpp.o
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/moc_testmedian.cpp.o
 .PHONY : moc_testmedian.cpp.o
 
 moc_testmedian.i: moc_testmedian.cpp.i
@@ -223,7 +220,7 @@ moc_testmedian.i: moc_testmedian.cpp.i
 
 # target to preprocess a source file
 moc_testmedian.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/moc_testmedian.cpp.i
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/moc_testmedian.cpp.i
 .PHONY : moc_testmedian.cpp.i
 
 moc_testmedian.s: moc_testmedian.cpp.s
@@ -232,7 +229,7 @@ moc_testmedian.s: moc_testmedian.cpp.s
 
 # target to generate assembly for a file
 moc_testmedian.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/moc_testmedian.cpp.s
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/moc_testmedian.cpp.s
 .PHONY : moc_testmedian.cpp.s
 
 testmedian.o: testmedian.cpp.o
@@ -241,7 +238,7 @@ testmedian.o: testmedian.cpp.o
 
 # target to build an object file
 testmedian.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/testmedian.cpp.o
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/testmedian.cpp.o
 .PHONY : testmedian.cpp.o
 
 testmedian.i: testmedian.cpp.i
@@ -250,7 +247,7 @@ testmedian.i: testmedian.cpp.i
 
 # target to preprocess a source file
 testmedian.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/testmedian.cpp.i
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/testmedian.cpp.i
 .PHONY : testmedian.cpp.i
 
 testmedian.s: testmedian.cpp.s
@@ -259,35 +256,8 @@ testmedian.s: testmedian.cpp.s
 
 # target to generate assembly for a file
 testmedian.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/testmedian.cpp.s
+	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/testmedian.cpp.s
 .PHONY : testmedian.cpp.s
-
-testmedian_autogen/mocs_compilation.o: testmedian_autogen/mocs_compilation.cpp.o
-
-.PHONY : testmedian_autogen/mocs_compilation.o
-
-# target to build an object file
-testmedian_autogen/mocs_compilation.cpp.o:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.cpp.o
-.PHONY : testmedian_autogen/mocs_compilation.cpp.o
-
-testmedian_autogen/mocs_compilation.i: testmedian_autogen/mocs_compilation.cpp.i
-
-.PHONY : testmedian_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-testmedian_autogen/mocs_compilation.cpp.i:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.cpp.i
-.PHONY : testmedian_autogen/mocs_compilation.cpp.i
-
-testmedian_autogen/mocs_compilation.s: testmedian_autogen/mocs_compilation.cpp.s
-
-.PHONY : testmedian_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-testmedian_autogen/mocs_compilation.cpp.s:
-	cd /home/elliott/graz && $(MAKE) -f tests/CMakeFiles/testmedian.dir/build.make tests/CMakeFiles/testmedian.dir/testmedian_autogen/mocs_compilation.cpp.s
-.PHONY : testmedian_autogen/mocs_compilation.cpp.s
 
 tests_autogen/mocs_compilation.o: tests_autogen/mocs_compilation.cpp.o
 
@@ -323,12 +293,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... testmedian"
 	@echo "... rebuild_cache"
 	@echo "... tests"
-	@echo "... testmedian_autogen"
+	@echo "... test"
 	@echo "... tests_autogen"
+	@echo "... __/Graz/median.o"
+	@echo "... __/Graz/median.i"
+	@echo "... __/Graz/median.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -338,9 +309,6 @@ help:
 	@echo "... testmedian.o"
 	@echo "... testmedian.i"
 	@echo "... testmedian.s"
-	@echo "... testmedian_autogen/mocs_compilation.o"
-	@echo "... testmedian_autogen/mocs_compilation.i"
-	@echo "... testmedian_autogen/mocs_compilation.s"
 	@echo "... tests_autogen/mocs_compilation.o"
 	@echo "... tests_autogen/mocs_compilation.i"
 	@echo "... tests_autogen/mocs_compilation.s"

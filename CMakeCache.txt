@@ -212,11 +212,17 @@ Qt5Test_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Test
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
 //Value Computed by CMake
 graz_BINARY_DIR:STATIC=/home/elliott/graz
 
 //Value Computed by CMake
 graz_SOURCE_DIR:STATIC=/home/elliott/graz
+
+//Dependencies for the target
+testmedian_LIB_DEPENDS:STATIC=general;Qt5::Test;
 
 
 ########################

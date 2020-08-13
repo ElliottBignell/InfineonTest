@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/elliott/graz/tests/main.cpp
-main.moc
-/home/elliott/graz/tests/main.moc
+/home/elliott/graz/Graz/median.cpp
+iostream
+-
+median.hpp
+/home/elliott/graz/Graz/median.hpp
 
-/home/elliott/graz/tests/tests_autogen/mocs_compilation.cpp
-
-tests_autogen/include/main.moc
+/home/elliott/graz/Graz/median.hpp
+algorithm
+-
+vector
+-
 
